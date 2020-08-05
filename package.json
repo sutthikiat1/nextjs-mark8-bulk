@@ -14,7 +14,8 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "build": "next build"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.11.1"
