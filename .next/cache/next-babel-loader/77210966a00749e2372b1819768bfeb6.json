@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { Table } from \"reactstrap\";","map":{"version":3,"sources":["/Users/sutthikiatphongsakornmetha/Documents/TestProject/next-test/components/Tables/index.js"],"names":["Table"],"mappings":"AAAA,SAASA,KAAT,QAAsB,YAAtB","sourcesContent":["import { Table } from \"reactstrap\";\n"]},"metadata":{},"sourceType":"module"}
