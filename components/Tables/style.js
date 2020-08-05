@@ -50,7 +50,7 @@ export const DivHeaderTable = styled.div`
     color: #0089ff;
     width: 10%;
     @media ${device.mobileL} {
-      width: 100%;
+      width: 10%;
     }
   }
 
@@ -64,7 +64,7 @@ export const DivHeaderTable = styled.div`
     color: #0089ff;
     width: 10%;
     @media ${device.mobileL} {
-      width: 100%;
+      width: 30%;
     }
   }
 
@@ -78,7 +78,7 @@ export const DivHeaderTable = styled.div`
     color: #0089ff;
     width: 10%;
     @media ${device.mobileL} {
-      width: 100%;
+      width: 30%;
     }
   }
 `;

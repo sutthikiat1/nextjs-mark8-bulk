@@ -21,11 +21,6 @@ const Tables = () => {
     return result;
   }
 
-  function hoverMenu() {
-    let menuElem = document.getElementsByClassName("amenities_menu");
-    console.log(menuElem);
-  }
-
   return (
     <>
       {data.length > 0 && (
@@ -191,7 +186,7 @@ const Tables = () => {
                             >
                               {amenities_menus.length}
                             </DropdownToggle>
-                            <DropdownMenu className="dropdown_menu">
+                            <DropdownMenu right className="dropdown_menu">
                               {amenities_menus.length > 0 && (
                                 <>
                                   <DropdownItem header>Amenities</DropdownItem>
