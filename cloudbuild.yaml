@@ -4,6 +4,18 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/nextjs']
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['beta', 'run', 'deploy', 'nextjs', '--image', 'gcr.io/$PROJECT_ID/nextjs', '--region', 'asia-east1','--platform', 'managed', '--allow-unauthenticated' , '--quiet']
+    args: [
+    'beta', 
+    'run', 
+    'deploy', 
+    'nextjs', 
+    '--image', 
+    'gcr.io/$PROJECT_ID/nextjs', 
+    '--region', 
+    'asia-east1',
+    '--platform', 
+    'managed', 
+    '--allow-unauthenticated', 
+    '--quiet']
   images:
   - gcr.io/$PROJECT_ID/nextjs
