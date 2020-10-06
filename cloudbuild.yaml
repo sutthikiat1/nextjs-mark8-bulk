@@ -16,6 +16,7 @@ steps:
     '--platform', 
     'managed', 
     '--allow-unauthenticated', 
-    '--quiet']
+    '--quiet',
+    ]
   images:
   - gcr.io/$PROJECT_ID/nextjs
