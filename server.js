@@ -10,12 +10,6 @@ app
   .prepare()
   .then(() => {
     const server = express();
-    // server.get("/detail", (req, res) => {
-    //   const actualPage = "/post";
-    //   const queryParams = { title: req.params.id };
-    //   console.log("in");
-    //   app.render(req, res, actualPage, queryParams);
-    // });
     server.get("*", (req, res) => {
       return handle(req, res);
     });
