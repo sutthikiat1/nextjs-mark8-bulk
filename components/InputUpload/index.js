@@ -30,17 +30,17 @@ const InputUpload = () => {
       />
       <DivInputUpload>
         <DivInputUploadTitle>
-          <h2 className="title">Bulk Upload form </h2>
-          <div className="text-help">
+          <h2 className='title'>Testing Bulk Upload form </h2>
+          <div className='text-help'>
             <span>you haven't upload any bulk data yed</span>
           </div>
         </DivInputUploadTitle>
         <hr />
         <DivInputUploadFile>
-          <h2 className="title">Choose your an input medthod</h2>
+          <h2 className='title'>Choose your an input medthod</h2>
           <CardUpload>
-            <div className="icon-upload" onClick={() => onClickUpload()}>
-              <i className="fas fa-upload" />
+            <div className='icon-upload' onClick={() => onClickUpload()}>
+              <i className='fas fa-upload' />
             </div>
             <div>
               <h5>{file.name ? file.name : "via CSV file "}</h5>
