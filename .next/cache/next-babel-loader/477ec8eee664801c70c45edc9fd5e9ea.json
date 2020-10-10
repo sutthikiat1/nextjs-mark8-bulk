@@ -1,1 +1,0 @@
-{"ast":null,"code":"import styled from \"styled-components\";\nexport const DivNavbar = styled.div.withConfig({\n  displayName: \"styles__DivNavbar\",\n  componentId: \"sc-33v2mi-0\"\n})([\"width:100%;height:56px;background:#002240;display:flex;align-items:center;.logo{width:50%;margin:0 auto;color:#ffffff;font-size:20px;}\"]);","map":null,"metadata":{},"sourceType":"module"}

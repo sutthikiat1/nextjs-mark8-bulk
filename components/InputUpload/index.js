@@ -30,7 +30,7 @@ const InputUpload = () => {
       />
       <DivInputUpload>
         <DivInputUploadTitle>
-          <h2 className='title'>Testing Bulk Upload form </h2>
+          <h2 className='title'>Testing Bulk Upload </h2>
           <div className='text-help'>
             <span>you haven't upload any bulk data yed</span>
           </div>
