@@ -26,10 +26,14 @@
 ## ขั้นตอน
 1. ในการ deploy ขึ้น Cloud Run นั้น เราจะไม่เอาโค้ดขึ้นเซิฟเวอร์โดยตรง(เพราะไม่มีเซิฟเวอร์) 
 แต่จะ build โค้ดภายใน Container แล้วค่อยส่ง Container ขึ้น Cloud Run แทน ซึ่งเมื่อมีผู้ใช้ยิงเข้า “เซิฟเวอร์” Cloud Run ก็จะเรียกให้ Container ทำงานแทน
+
 2. เขียนคำสั่งต่างๆลงใน DockerFile
+
 3. นำ DockerFile สร้างเป็น Docker Image Container จากโค้ดที่เราเขียนและเอาขึ้น Container Registry ด้วยคำสั่ง  $- gcloud builds submit --tag gcr.io/[PROJECT ID]/[IMAGE NAME]
-4. เขียน script ให้ Cloud Build deploy อัตโนมัติ 
-> โดยเบื้องต้นให้ตั้ง Trigger ใน Google cloud console ให้เชื่อมต่อกับ GitHub, BitBucket, หรืออื่นๆ และเมื่อเรา push code ขึ้น git มันจะอ่านคำสั่งในไฟล์ cloudbuild.yaml
+
+> โดยเบื้องต้นให้ตั้ง Trigger ใน Cloud Build console ให้เชื่อมต่อกับ GitHub, BitBucket, หรืออื่นๆ และเมื่อเรา push code ขึ้น git มันจะอ่านคำสั่งในไฟล์ cloudbuild.yaml
+
+4. เขียน script ให้ Cloud Build deploy อัตโนมัติ ให้เราสร้างไฟล์ cloudbuild.yaml ให้ตรงกับในโฟลเดอร์ที่เรากำหนดไว้ใน Cloud Build Trigger
 - 4.1.1 ใน cloudbuild.yaml บรรทัดแรก - เราจะใช้คำสั่ง สร้าง Docker Container จาก name และ args ที่เราใส่ไป จะเสมือนเราสั่งคำสั่ง $- docker build -t gcr.io/$PROJECT_ID/[SERVICE-NAME] (เรียกใช้ Container Image ที่เราเก็บไว้บน Container Registry)
 - 4.1.2 push Container Image หากเราต้องเก็บ Container Image ไว้บน Container Registry เราจะทำในขั้นตอนนี้ เสมือนรันคำสั่ง docker push gcr.io/$PROJECT_ID/[SERVICE-NAME]
 - 4.1.3 deploy ขึ้น Cloud Run ในสเต็ปนี้จะรันคำสั่งเหมือนตอน deploy Cloud Run ด้วยมือเลย คือ $- gcloud beta run deploy [SERVICE-NAME] --image gcr.io/$PROJECT_ID/[SERVICE-NAME] --region [REGION] --platform [PLATFORM] --quiet
