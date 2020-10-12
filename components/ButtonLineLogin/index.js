@@ -23,6 +23,7 @@ function ButtonLineLogin() {
             liff.login({ redirectUri: "https://nextjs-sutthikiat.netlify.app/" });
         } else {
             const friend = await liff.getFriendship();
+            console.log(friend);
             if (!friend) {
                 window.location = 'https://line.me/R/ti/p/@463wmqij';
             } else {
