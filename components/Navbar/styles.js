@@ -7,10 +7,19 @@ export const DivNavbar = styled.div`
   display: flex;
   align-items: center;
 
+
+
   .logo {
+
     width: 50%;
     margin: 0 auto;
     color: #ffffff;
     font-size: 20px;
+  }
+
+  .button {
+    width : 20%;
+    background : transparent;
+    border : transparent;
   }
 `;

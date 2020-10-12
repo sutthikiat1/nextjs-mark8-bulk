@@ -1,4 +1,5 @@
 import { DivNavbar } from "./styles";
+import ButtonLineLogin from '../ButtonLineLogin'
 
 const Navbar = () => (
   <div>
@@ -18,6 +19,9 @@ const Navbar = () => (
             />
           </svg>
         </h3>
+      </div>
+      <div className='button'>
+      <ButtonLineLogin/>
       </div>
     </DivNavbar>
   </div>

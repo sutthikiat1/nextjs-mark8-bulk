@@ -12,6 +12,7 @@ const Header = () => (
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
         rel="stylesheet"
       />
+      <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     </Head>
   </>
 );
