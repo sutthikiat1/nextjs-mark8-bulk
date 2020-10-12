@@ -6,6 +6,7 @@ function ButtonLineLogin() {
     const [isAddFriend , setAddFriend] = useState(false);
 
     useEffect(()=>{
+        let liff = window.liff;
         (async ()=>{
             await liff.init({ liffId: '1655092671-9LGkOlGY' });
             if (liff.isLoggedIn()) {
