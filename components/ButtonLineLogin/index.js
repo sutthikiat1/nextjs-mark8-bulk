@@ -1,24 +1,40 @@
-import React , {useEffect} from 'react'
+import React , {useEffect , useState} from 'react'
 import styled from 'styled-components';
 
 function ButtonLineLogin() {
+    const [useLogin , setLogin] = useState(false);
+    const [isAddFriend , setAddFriend] = useState(false);
 
-        const LoginLine = async ()=>{
+    useEffect(()=>{
+        (async ()=>{
+            await liff.init({ liffId: '1655092671-9LGkOlGY' });
+            if (liff.isLoggedIn()) {
+                setLogin(true);
+                const profile = await liff.getProfile();
+                console.log(profile);
+            } else {
+                setLogin(false);
+            }
+        })();
+    })
+    
+    const LoginLine = async ()=>{
         if (!liff.isLoggedIn()) {
             liff.login({ redirectUri: "https://nextjs-sutthikiat.netlify.app/" });
         } else {
-            liff.getFriendship().then((data)=>{
-                console.log(data);
-                if (!data.friendFlag) {
-                    window.location = 'https://line.me/R/ti/p/@463wmqij';
-                  }
-            })
+            const friend = await liff.getFriendship();
+            if (!friend) {
+                window.location = 'https://line.me/R/ti/p/@463wmqij';
+            } else {
+                alert('Code : 1412')
+            }
+            
         }
     }
 
     return (
         <ButtonLogin onClick={()=>LoginLine()}>
-            Line Login
+            {useLogin ? isAddFriend ? 'Get Code' : 'Add Friend' : 'Line Login'}
         </ButtonLogin>
     )
 }
