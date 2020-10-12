@@ -6,7 +6,8 @@ import InputUpload from "../components/InputUpload";
 import Tables from "../components/Tables";
 import { ContextProvider } from "../hooks/DataProvider";
 
-const Index = () => (
+const Index = () => {
+  return (
   <>
     <Header />
     <BasicLayout>
@@ -17,6 +18,7 @@ const Index = () => (
       </ContextProvider>
     </BasicLayout>
   </>
-);
+  )
+}
 
 export default Index;

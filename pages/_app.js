@@ -2,8 +2,10 @@ import React , {useEffect} from 'react';
 
 function MyApp({ Component, pageProps }) {
     useEffect(() => {
-        const liff = window.liff;
-        liff.init({ liffId: '1655092671' });
+        let liff = window.liff;
+        (async ()=>{
+            await liff.init({ liffId: '1655092671-9LGkOlGY' })
+        })();
     }, [])
     
 

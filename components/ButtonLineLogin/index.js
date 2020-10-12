@@ -2,9 +2,15 @@ import React , {useEffect} from 'react'
 import styled from 'styled-components';
 
 function ButtonLineLogin() {
+        const LoginLine = async ()=>{
+        console.log(liff.isLoggedIn())
+        // const friend = liff.getFriendship();
 
-    const LoginLine = ()=>{
-        liff.login({ redirectUri: "https://nextjs-sutthikiat.netlify.app/" })
+        if (!liff.isLoggedIn()) {
+            liff.login({ redirectUri: "http://localhost:3000" });
+        } else {
+            await liff.getFriendship();
+        }
     }
 
     return (
