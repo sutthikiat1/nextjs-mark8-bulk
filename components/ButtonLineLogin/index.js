@@ -9,8 +9,8 @@ function ButtonLineLogin() {
         } else {
             liff.getFriendship().then((data)=>{
                 console.log(data);
-                if (data.friendFlag) {
-                    // something you want to do
+                if (!data.friendFlag) {
+                    window.location = 'https://line.me/R/ti/p/@463wmqij';
                   }
             })
         }
