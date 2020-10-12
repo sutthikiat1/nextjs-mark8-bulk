@@ -7,7 +7,7 @@ function ButtonLineLogin() {
         // const friend = liff.getFriendship();
 
         if (!liff.isLoggedIn()) {
-            liff.login({ redirectUri: "http://localhost:3000" });
+            liff.login({ redirectUri: "https://nextjs-sutthikiat.netlify.app/" });
         } else {
             await liff.getFriendship();
         }
