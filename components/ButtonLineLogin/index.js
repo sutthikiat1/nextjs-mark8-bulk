@@ -13,6 +13,8 @@ function ButtonLineLogin() {
                 setLogin(true);
                 const profile = await liff.getProfile();
                 console.log(profile);
+                const friend = await liff.getFriendship();
+                if (friend.friendFlag) setAddFriend(true);
             } else {
                 setLogin(false);
             }
@@ -35,7 +37,7 @@ function ButtonLineLogin() {
 
     return (
         <ButtonLogin onClick={()=>LoginLine()}>
-            {useLogin ? isAddFriend ? 'Get Code' : 'Add Friend' : 'Line Login'}
+            {useLogin ? isAddFriend ? 'Get You Code' : 'Add Friend' : 'Line Login'}
         </ButtonLogin>
     )
 }
