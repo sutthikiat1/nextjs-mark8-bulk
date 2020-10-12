@@ -16,7 +16,7 @@ function ButtonLineLogin() {
                 setLogin(false);
             }
         })();
-    })
+    },[])
     
     const LoginLine = async ()=>{
         if (!liff.isLoggedIn()) {
