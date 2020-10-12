@@ -23,11 +23,10 @@ function ButtonLineLogin() {
             liff.login({ redirectUri: "https://nextjs-sutthikiat.netlify.app/" });
         } else {
             const friend = await liff.getFriendship();
-            console.log(friend);
-            if (!friend) {
+            if (!friend.friendFlag) {
                 window.location = 'https://line.me/R/ti/p/@463wmqij';
             } else {
-                alert('Code : 1412')
+                alert('You get the code :: 1412')
             }
             
         }
