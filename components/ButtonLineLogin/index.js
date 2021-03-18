@@ -36,7 +36,7 @@ function ButtonLineLogin() {
     }
 
     return (
-        <ButtonLogin>
+        <ButtonLogin onClick={()=>LoginLine()}>
             {useLogin ? isAddFriend ? 'Get You Code' : 'Add Friend' : 'Line Login'}
         </ButtonLogin>
     )
