@@ -8,7 +8,7 @@ function ButtonLineLogin() {
     useEffect(()=>{
         let liff = window.liff;
         (async ()=>{
-            await liff.init({ liffId: '1655092671-9LGkOlGY' });
+            await liff.init({ liffId: '1655092671-Dbk0dekm' });
             if (liff.isLoggedIn()) {
                 setLogin(true);
                 const profile = await liff.getProfile();
